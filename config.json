@@ -1,0 +1,13 @@
+{
+  "network": {
+    "servers": [ "logstash:5043" ],
+    "ssl ca": "/tmp/lumberjack.crt",
+    "timeout": 15
+  },
+  "files": [
+    {
+      "paths": [ "/var/lib/docker/containers/*/*.log" ],
+      "fields": { "type": "docker" }
+    }
+  ]
+}
